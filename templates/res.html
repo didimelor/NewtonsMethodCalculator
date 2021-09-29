@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+{% block content %}
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+    body{
+        background-color:#ebf4f6;
+        padding: 3%;
+        font-family: 'Antic Didone', serif;
+    }
+    h1{
+        font-family: 'Abril Fatface', cursive;
+        color:#58668b;
+        font-size: 40px;
+    }
+    table, th, td {
+        font-size: 20px;
+        border: 1px solid #58668b;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 5px;
+        width: 30%;
+        text-align: left;
+    }
+    th {
+        font-weight: bold;
+    }
+    tr:hover {background-color: #76b4bd; color: #ebf4f6;}
+</style>
+<body>
+    <h1>{{message}}</h1>
+    <table style="width:50%">
+        <tr>
+          <th>Función ingresada:</th>
+          <td>{{func}}</td>
+        </tr>
+        <tr>
+          <th>Resultado:</th>
+          <td>{{resultado}}</td>
+        </tr>
+        <tr>
+            <th>Precisión:</th>
+            <td>{{p}}</td>
+          </tr>
+        <tr>
+          <th>Petición numero:</th>
+          <td>{{id}}</td>
+        </tr>
+        <tr>
+            <th>Iteraciones:</th>
+            <td>{{it}}</td>
+        </tr>
+        <tr>
+            <th>Tiempo:</th>
+            <td>{{t}}</td>
+        </tr>
+      </table>
+</body>
+{% endblock %}
+</html>
